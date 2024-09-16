@@ -11,3 +11,23 @@
     padding: 36px 64px;
     box-shadow: 8px 8px 16px rgba(0,0,0,0.09);
 }
+
+.formulario label { 
+    font-size: 16px;
+    font-weight: 700;
+    color: #36332D;
+    margin-bottom: 8px;
+}
+
+.formulario ::placeholder { 
+    color: #36332D;
+    font-size: 13px;
+}
+
+.formulario input { 
+    width: 100%;
+    padding: 12px;
+    border-radius: 2px;
+    border: none;
+    font-size: 13px;
+}
