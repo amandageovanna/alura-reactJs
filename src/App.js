@@ -14,12 +14,12 @@ function App() {
     },
     {
       nome: 'Vampiro',
-      corPrimaria: '#514438',
-      corSecundaria: '#d4bba3'
+      corPrimaria: '#d4bba3',
+      corSecundaria: '#eddfd1'
     },
     {
       nome: 'Originais',
-      corPrimaria: '#7a6c5e',
+      corPrimaria: '#1d1000',
       corSecundaria: '#fff8ee'
     },
     {
@@ -29,12 +29,12 @@ function App() {
     },
     {
       nome: 'Doppelganger',
-      corPrimaria: '#bba987',
-      corSecundaria: '#fff8ec'
+      corPrimaria: '#a46856',
+      corSecundaria: '#fae3dc'
     },
     {
       nome: 'Humano',
-      corPrimaria: '#5f4200',
+      corPrimaria: '#c4a689',
       corSecundaria: '#FFF5D9'
     },
     
