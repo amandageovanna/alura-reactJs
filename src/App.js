@@ -1,12 +1,12 @@
 import { useState } from 'react';
 import Banner from './componentes/Banner';
 import Formulario from './componentes/Formulario';
-import Time from './componentes/Time';
+import Especie from './componentes/Especie';
 import Rodape from './componentes/Rodape';
 
 function App() {
 
-  const times = [
+  const especies = [
     {
       nome: 'Bruxa',
       corPrimaria: '#271d11',
@@ -40,24 +40,24 @@ function App() {
     
   ]
 
-  const [colaboradores, setColaboradores] = useState([])
+  const [personagens, setPersonagens] = useState([])
 
-  const aoNovoColaboradorAdicionado = (colaborador) => {
-    console.log(colaborador)
-    setColaboradores([...colaboradores, colaborador])
+  const aoNovoPersonagemAdicionado = (personagem) => {
+    console.log(personagem)
+    setPersonagens([...personagens, personagem])
   }
 
   return (
     <div className="App">
       <Banner />
-      <Formulario times={times.map(time => time.nome)} aoColaboradorCadastrado={colaborador => aoNovoColaboradorAdicionado(colaborador)}/>
+      <Formulario especies={especies.map(especie => especie.nome)} aoPersonagemCadastrado={personagem => aoNovoPersonagemAdicionado(personagem)}/>
 
-      {times.map(time => <Time 
-        key={time.nome} 
-        nome={time.nome} 
-        corPrimaria={time.corPrimaria} 
-        corSecundaria={time.corSecundaria} 
-        colaboradores={colaboradores.filter(colaborador => colaborador.time === time.nome)}
+      {especies.map(especie => <Especie 
+        key={especie.nome} 
+        nome={especie.nome} 
+        corPrimaria={especie.corPrimaria} 
+        corSecundaria={especie.corSecundaria} 
+        personagens={personagens.filter(personagem => personagem.especie === especie.nome)}
       />)}   
       <Rodape />
     </div>

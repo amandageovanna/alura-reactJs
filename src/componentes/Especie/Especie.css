@@ -1,16 +1,16 @@
-.time {
+.especie {
     text-align: center;
     padding: 32px;
 }
 
-.time h3 {
+.especie h3 {
     font-size: 32px;
     border-bottom: 4px solid;
     display: inline-block;
     padding-bottom: 8px;
 }
 
-.time .colaboradores {
+.especie .personagens {
     display: flex;
     justify-content: space-around;
     margin-top: 32px;

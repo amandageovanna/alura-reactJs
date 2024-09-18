@@ -7,22 +7,22 @@ import './Formulario.css'
 const Formulario = (props) => {
 
     const [nome, setNome] = useState('')
-    const [cargo, setCargo] = useState('')
+    const [status, setStatus] = useState('')
     const [imagem, setImagem] = useState('')
-    const [time, setTime] = useState('')
+    const [especie, setEspecie] = useState('')
 
     const aoSalvar = (evento) => {
         evento.preventDefault()
-        props.aoColaboradorCadastrado({
+        props.aoPersonagemCadastrado({
             nome,
-            cargo,
+            status,
             imagem,
-            time
+            especie
         })
         setNome('')
-        setCargo('')
+        setStatus('')
         setImagem('')
-        setTime('')
+        setEspecie('')
     }
 
     return (
@@ -40,8 +40,8 @@ const Formulario = (props) => {
                     obrigatorio={true}
                     label="Status (vivo, morto, fantasma, etc)"
                     placeholder="Digite o status do personagem" 
-                    valor={cargo}
-                    aoAlterado={valor => setCargo(valor)}
+                    valor={status}
+                    aoAlterado={valor => setStatus(valor)}
                 />
                 <CampoTexto
                     label="Imagem"
@@ -52,9 +52,9 @@ const Formulario = (props) => {
                 <ListaSuspensa
                     obrigatorio={true}
                     label="Espécie" 
-                    itens={props.times}
-                    valor={time}
-                    aoAlterado={valor => setTime(valor)}
+                    itens={props.especies}
+                    valor={especie}
+                    aoAlterado={valor => setEspecie(valor)}
                 />
                 <Botao>
                     Criar Card
